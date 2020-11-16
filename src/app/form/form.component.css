@@ -1,0 +1,100 @@
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: RGB( 230, 230, 230 );
+    font-family: 'Hind Vadodara', sans-serif;
+    background: url(https://image.freepik.com/foto-gratis/pared-blanca-sucia-cemento-natural-o-pared-textura-antigua-piedra-banner-pared-conceptual-grunge-material-o-construccion_1258-17209.jpg) fixed center;
+}
+
+form{
+    background-color: white;
+    width: 400px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+form h2{
+    margin-top: 50px;
+    margin-left: 50px; 
+    font-size: 30px;
+    font-weight: 500;
+}
+form h2:after{
+    content: "";
+    display: block;
+    padding-top: 20px;
+    margin-left: -20px;
+    width: 50px;
+    border-bottom: 2px solid RGB( 228, 38, 127 );
+    margin-bottom: 40px;
+}
+
+form div{
+    margin-left: 50px;
+    margin-bottom: 30px; 
+}
+form div:after{
+    content: "";
+    display: block;
+    padding-top: 10px;
+    width: 300px;
+    border-bottom: 0.5px solid RGB( 160, 160, 160 );
+}
+form div i{
+    color: RGB( 160, 160, 160 );
+}
+form input{
+    font-size: 14px;
+    border: none;
+    margin-left: 10px;   
+}
+form input:focus{
+    outline: none;
+}
+form div p{
+    text-transform: uppercase;
+    color: RGB(298, 38, 127);
+    font-size: 11px;
+    margin-top: 4px;
+}
+form select{
+    border: none;
+    font-size: 14px;
+    margin-left: 10px;
+    width: 275px;
+    appearance: none;
+}
+form select:hover{
+   cursor: pointer;
+}
+form select:focus{
+    outline: none;
+}
+form #textbox{
+    border: none;
+    border: 0.5px solid RGB( 160, 160, 160 );
+    margin-left: 50px;
+    margin-bottom: 30px;
+    width: 300px;
+    height: 100px;
+    overflow-y: scroll;
+}
+form #textbox:focus{
+    outline: none;
+}
+form #send{
+    background-color: RGB(298, 38, 127);
+    color: white;
+    font-size: 14px;
+    width: 305px;
+    height: 35px;
+    margin-left: 50px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+form #send:hover{
+    cursor: pointer; 
+}

@@ -1,0 +1,32 @@
+<div class="form">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h2>New post</h2>
+        <div>
+            <i class="fas fa-heading"></i>
+            <input type="text" formControlName="titulo" placeholder="Título del post">
+            <p *ngIf="form.get('titulo').hasError('required') && form.get('titulo').touched"> Tu post necesita un título</p>
+        </div>
+        <div>
+            <i class="far fa-user"></i>
+            <input type="text" formControlName="autor" placeholder="Autor">
+            <p *ngIf="form.get('autor').hasError('required') && form.get('autor').touched"> Firma tu post, puedes usar un seudónimo</p>
+        </div>
+        <div>
+            <i class="far fa-image"></i>
+            <input type="text" formControlName="imagen" placeholder="Url de la imagen">
+            <p *ngIf="form.get('imagen').hasError('pattern') || form.get('imagen').hasError('required') && form.get('imagen').touched"> Url no válida </p>
+        </div>
+        <div>
+            <i class="far fa-hand-pointer"></i>
+            <select formControlName="categoria">
+                <option [ngValue]="null" disabled> Categoría </option>
+                <option *ngFor="let categoria of arrCategorias | keyvalue" [ngValue]="categoria.value"> {{categoria.value}} </option>
+            </select>
+            <p *ngIf="form.get('categoria').hasError('required') && form.get('categoria').touched"> Elige una categoría </p>
+        </div>
+        <textarea id="textbox" formControlName="texto" maxlength="300" placeholder="Cuéntalo en 300 caracteres">Cuentalo en 300 caracteres</textarea>
+        <p *ngIf="form.get('texto').hasError('required') && form.get('texto').touched"> Elige una categoría </p>
+        <input id="send" type="submit" value="Publish">
+        <!-- [disabled]="!form.valid" -->
+    </form>
+</div>

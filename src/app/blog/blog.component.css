@@ -1,0 +1,94 @@
+.blog{
+    background-color: RGB( 236, 236, 236 );
+}
+.filtro{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.filtro div{
+    width: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.filtro div button{
+    font-family: 'Hind Vadodara', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: RGB(95, 99, 103);
+    background: none;
+    border: none;
+    text-transform: capitalize;
+}
+.filtro div button:hover{
+   color: RGB(228, 38, 127);
+   border-bottom: 2px solid RGB(228, 38, 127);
+   cursor: pointer;
+}
+.selected{
+
+}
+
+.posts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.posts .post{
+    width: 31%;
+    background-color: white;
+    margin-bottom: 40px;
+}
+.posts .post:hover{
+    background-color: RGB( 175, 249, 74 );
+}
+.posts .post .text{
+    font-family: 'Hind Vadodara', sans-serif;
+    margin-top: 40px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-weight: 300;
+    color: RGB(95, 99, 103);
+}
+.posts .post .text h3{
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.posts .post .text small{
+    font-size: 14px;
+}
+.posts .post .text p{
+    white-space: pre-wrap;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 26px;
+}
+.posts .post .image{
+    filter: grayscale(100%) contrast(80%) brightness(150%);
+    margin-top: 40px;
+}
+.posts .post .image img{
+    width: 100%;
+    margin-bottom: -4px;
+}
+
+@media (max-width: 1000px) {
+    .posts .post{
+        width: 48%;
+        background: white;
+    }
+}
+
+@media (max-width: 600px){
+    .posts .post{
+        width: 98%;
+        background: white;
+    }
+}

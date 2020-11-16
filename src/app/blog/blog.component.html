@@ -1,0 +1,24 @@
+<div class="blog">
+<div class="filtro container">
+    <div>
+        <button> Todas </button>
+        <button *ngFor="let categoria of arrCategorias" (click)="onClickCategoria($event)"> {{ categoria }} </button>
+    </div>
+</div>
+
+<div class="posts container">
+    <div class="post" *ngFor="let post of postsDeBlog; let indice = index">
+        <div class="text">
+            <h3> #{{ indice | number:'2.0' }}. {{ post.titulo }} </h3>
+            <!-- <h3> {{ post.categoria }} </h3> -->
+            <small> {{ post.fecha | date: 'dd . MMMM . yyyy' }} </small>
+            <p> {{ post.texto}} </p>
+            <small> {{ post.autor }} </small>
+        </div>
+        <div class="image">
+            <img [src]="post.imagen">
+        </div>
+    </div>
+</div>
+
+</div>
